@@ -1,0 +1,73 @@
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.box{
+    width: 500px;
+    height: 300px;
+    margin: 100px auto;
+    position: relative;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.box > input[type=radio]{
+    position: relative;
+    top: 310px;
+    left: 162.5px;
+    margin: 10px;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+}
+.box > label{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: 600ms;
+}
+.slide-1{
+    background: url("../images/wonderful-san-francisco-skyscrapers-cityscape-from-pier-at-night-picjumbo-com.jpg") no-repeat center center/500px 300px ;
+}
+.slide-2{
+    background: url("../images/autumn-colors-in-prague-czechia-picjumbo-com.jpg") no-repeat center center/500px 300px;
+}
+.slide-3{
+    background: url("../images/snow-covered-road-picjumbo-com.jpg") no-repeat center center/500px 300px;
+}
+.slide-4{
+    background: url("../images/krivan-mountain-slovakia-picjumbo-com.jpg") no-repeat center center/500px 300px;
+}
+.slide-5{
+    background: url("../images/luxury-yacht-cruising-in-the-bay-picjumbo-com.jpg") no-repeat center center/500px 300px;
+}
+
+#radio-1:checked ~ .slide-1, #radio-2:checked ~ .slide-2, #radio-3:checked ~ .slide-3, #radio-4:checked ~ .slide-4, #radio-5:checked ~ .slide-5 {
+    transform: translate3d(0%,0,0px);
+    box-shadow: 0 10px 14px 0 rgba(0,0,0,.6);
+    opacity: 1;
+}
+#radio-1:checked ~ .slide-2, #radio-2:checked ~ .slide-3, #radio-3:checked ~ .slide-4, #radio-4:checked ~ .slide-5, #radio-5:checked ~ .slide-1{
+    transform: translate3d(15%,0,-150px);
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,.4);
+    opacity: .8;
+}
+#radio-1:checked ~ .slide-3, #radio-2:checked ~ .slide-4, #radio-3:checked ~ .slide-5, #radio-4:checked ~ .slide-1, #radio-5:checked ~ .slide-2{
+    transform: translate3d(30%,0,-250px);
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,.4);
+    opacity: .8;
+}
+#radio-1:checked ~ .slide-5, #radio-2:checked ~ .slide-1, #radio-3:checked ~ .slide-2, #radio-4:checked ~ .slide-3, #radio-5:checked ~ .slide-4{
+    transform: translate3d(-15%,0,-150px);
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,.4);
+    opacity: .8;
+}
+#radio-1:checked ~ .slide-4, #radio-2:checked ~ .slide-5, #radio-3:checked ~ .slide-1, #radio-4:checked ~ .slide-2, #radio-5:checked ~ .slide-3{
+    transform: translate3d(-30%,0,-250px);
+    box-shadow: 0 8px 14px 0 rgba(0,0,0,.4);
+    opacity: .8;
+}
